@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "test": "https://example.com/test-automation/"
+  },
+  "@graph": [
+    {
+      "@id": "test:TestCase",
+      "@type": "Class",
+      "name": "TestCase",
+      "description": "A test case containing multiple test steps"
+    },
+    {
+      "@id": "test:TestStep",
+      "@type": "Class",
+      "name": "TestStep",
+      "description": "An individual step within a test case"
+    },
+    {
+      "@id": "test:TestResult",
+      "@type": "Class",
+      "name": "TestResult",
+      "description": "The result of executing a test case"
+    },
+    {
+      "@id": "test:hasTestStep",
+      "@type": "Property",
+      "name": "hasTestStep",
+      "description": "Links a TestCase to its TestSteps",
+      "domainIncludes": "test:TestCase",
+      "rangeIncludes": "test:TestStep"
+    },
+    {
+      "@id": "test:hasResult",
+      "@type": "Property",
+      "name": "hasResult",
+      "description": "Links a TestCase to its TestResults",
+      "domainIncludes": "test:TestCase",
+      "rangeIncludes": "test:TestResult"
+    },
+    {
+      "@id": "test:belongsToTestCase",
+      "@type": "Property",
+      "name": "belongsToTestCase",
+      "description": "Links a TestStep back to its TestCase",
+      "domainIncludes": "test:TestStep",
+      "rangeIncludes": "test:TestCase"
+    },
+    {
+      "@id": "test:resultOfTestCase",
+      "@type": "Property",
+      "name": "resultOfTestCase",
+      "description": "Links a TestResult back to its TestCase",
+      "domainIncludes": "test:TestResult",
+      "rangeIncludes": "test:TestCase"
+    }
+  ]
+}
