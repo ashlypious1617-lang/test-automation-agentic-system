@@ -45,3 +45,28 @@ This app follows the test-automation-schema.jsonld structure:
 - **TestCase**: Container for test scenarios
 - **TestStep**: Individual actions within a test
 - **TestResult**: Execution outcomes and analysis
+
+## Project Screenshots
+
+### Knowledge Graph
+![Knowledge Graph](screenshots/knowledge-graph.png)
+
+### CSV Data Ingestion
+![CSV Upload](screenshots/csv-upload.png)
+
+### MCP Configuration
+![MCP Settings](screenshots/bob-mcp-settings.png)
+
+### Streamlit UI
+![Streamlit UI](screenshots/streamlit-ui.png)
+
+
+## External Data Integration
+
+A CSV data source was uploaded into IBM ICA Context Studio to simulate external test execution ingestion.
+
+The ingested data includes:
+- Test cases
+- Test steps
+- Execution results
+- Failure scenarios
